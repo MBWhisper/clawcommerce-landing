@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة الإدارة - ClawCommerce</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard-layout">
+  <!-- Admin Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon" style="width:32px;height:32px;background:var(--gradient-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem">🦞</div>
+      <span style="background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Admin Panel</span>
+    </div>
+    
+    <div style="padding:0 0.75rem;margin-bottom:1rem">
+      <div style="background:rgba(255,101,132,0.1);border:1px solid rgba(255,101,132,0.3);border-radius:var(--radius-md);padding:0.75rem;display:flex;align-items:center;gap:0.5rem">
+        <i class="fas fa-shield-alt" style="color:var(--secondary)"></i>
+        <span style="font-size:0.8rem;color:var(--secondary);font-weight:600">وضع المشرف</span>
+      </div>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">الإدارة</div>
+      <a href="admin.html" class="sidebar-link active">
+        <div class="icon"><i class="fas fa-tachometer-alt"></i></div>
+        لوحة التحكم
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        المستخدمون
+        <span class="badge badge-primary" style="margin-right:auto">15,247</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-store"></i></div>
+        المتاجر
+        <span class="badge badge-success" style="margin-right:auto">12,891</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-credit-card"></i></div>
+        الاشتراكات
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+        الإيرادات
+      </a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">المحتوى</div>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-blog"></i></div>
+        المدونة
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-robot"></i></div>
+        إدارة الوكلاء
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-bell"></i></div>
+        الإشعارات
+        <span class="badge badge-danger" style="margin-right:auto">8</span>
+      </a>
+    </div>
+    
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">النظام</div>
+      <a href="status.html" class="sidebar-link">
+        <div class="icon"><i class="fas fa-server"></i></div>
+        حالة النظام
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-cog"></i></div>
+        الإعدادات
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-file-alt"></i></div>
+        السجلات
+      </a>
+    </div>
+    
+    <div style="padding:1rem 0.75rem;border-top:1px solid var(--border);margin-top:auto">
+      <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;border-radius:var(--radius-md)">
+        <div style="width:36px;height:36px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.9rem;font-weight:700;color:white">S</div>
+        <div>
+          <div style="font-weight:600;color:white;font-size:0.875rem">Super Admin</div>
+          <div style="font-size:0.75rem;color:var(--secondary)">مشرف النظام</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Topbar -->
+    <div class="dashboard-topbar">
+      <div style="display:flex;align-items:center;gap:1rem">
+        <h1 style="font-size:1.3rem;font-weight:700">لوحة إدارة النظام</h1>
+        <span class="badge badge-danger">Admin</span>
+      </div>
+      <div class="topbar-actions">
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="ar">عربي</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="notification-btn">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">8</span>
+        </button>
+        <div class="user-avatar" style="background:var(--secondary)">S</div>
+      </div>
+    </div>
+    
+    <!-- Admin Stats -->
+    <div class="dashboard-stats" style="grid-template-columns:repeat(5,1fr)">
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(108,99,255,0.15)">
+            <i class="fas fa-users" style="color:var(--primary-light)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 8.5%</span>
+        </div>
+        <span class="stat-card-value" data-counter="15247" data-suffix="">0</span>
+        <span class="stat-card-label">إجمالي المستخدمين</span>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(67,233,123,0.15)">
+            <i class="fas fa-store" style="color:var(--accent)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 12.3%</span>
+        </div>
+        <span class="stat-card-value" data-counter="12891" data-suffix="">0</span>
+        <span class="stat-card-label">متاجر نشطة</span>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(255,189,46,0.15)">
+            <i class="fas fa-dollar-sign" style="color:#FFBD2E"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 18.7%</span>
+        </div>
+        <span class="stat-card-value">2.4M</span>
+        <span class="stat-card-label">الإيرادات (ريال)</span>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(255,101,132,0.15)">
+            <i class="fas fa-ticket-alt" style="color:var(--secondary)"></i>
+          </div>
+          <span class="stat-card-trend down"><i class="fas fa-arrow-down"></i> 3.2%</span>
+        </div>
+        <span class="stat-card-value" data-counter="47" data-suffix="">0</span>
+        <span class="stat-card-label">تذاكر مفتوحة</span>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(56,249,215,0.15)">
+            <i class="fas fa-robot" style="color:var(--accent-blue)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 5.1%</span>
+        </div>
+        <span class="stat-card-value">99.9%</span>
+        <span class="stat-card-label">وقت تشغيل الوكلاء</span>
+      </div>
+    </div>
+    
+    <!-- Charts Row -->
+    <div class="grid-2" style="gap:1.5rem;margin-bottom:2rem">
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">نمو المستخدمين</span>
+          <div class="tabs">
+            <button class="tab-btn active">شهر</button>
+            <button class="tab-btn">ربع</button>
+            <button class="tab-btn">سنة</button>
+          </div>
+        </div>
+        <canvas id="users-chart" height="200"></canvas>
+      </div>
+      
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">توزيع الاشتراكات</span>
+        </div>
+        <canvas id="subscriptions-chart" height="200"></canvas>
+      </div>
+    </div>
+    
+    <!-- Recent Users -->
+    <div class="chart-container" style="margin-bottom:2rem">
+      <div class="chart-header">
+        <span class="chart-title">أحدث المستخدمين</span>
+        <div style="display:flex;gap:0.75rem">
+          <div class="search-bar" style="max-width:250px">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="بحث...">
+          </div>
+          <button class="btn btn-primary btn-sm">
+            <i class="fas fa-plus"></i>
+            إضافة مستخدم
+          </button>
+        </div>
+      </div>
+      
+      <div style="overflow-x:auto">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>المستخدم</th>
+              <th>البريد الإلكتروني</th>
+              <th>الخطة</th>
+              <th>المتاجر</th>
+              <th>الحالة</th>
+              <th>تاريخ التسجيل</th>
+              <th>الإجراءات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.75rem">
+                  <div style="width:32px;height:32px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:white">أ</div>
+                  <div>
+                    <div style="font-weight:600;color:white;font-size:0.875rem">أحمد الشمري</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">ID: #15247</div>
+                  </div>
+                </div>
+              </td>
+              <td>ahmed@example.com</td>
+              <td><span class="badge badge-primary">احترافي</span></td>
+              <td>3</td>
+              <td><span class="badge badge-success">نشط</span></td>
+              <td style="color:var(--text-muted)">28 مارس 2024</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-edit"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem;color:var(--secondary)"><i class="fas fa-ban"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.75rem">
+                  <div style="width:32px;height:32px;background:var(--gradient-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:var(--bg-dark)">س</div>
+                  <div>
+                    <div style="font-weight:600;color:white;font-size:0.875rem">سارة العتيبي</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">ID: #15246</div>
+                  </div>
+                </div>
+              </td>
+              <td>sara@example.com</td>
+              <td><span class="badge badge-success">مبتدئ</span></td>
+              <td>1</td>
+              <td><span class="badge badge-success">نشط</span></td>
+              <td style="color:var(--text-muted)">27 مارس 2024</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-edit"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem;color:var(--secondary)"><i class="fas fa-ban"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.75rem">
+                  <div style="width:32px;height:32px;background:linear-gradient(135deg,#FF6584,#FF8C69);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:white">م</div>
+                  <div>
+                    <div style="font-weight:600;color:white;font-size:0.875rem">محمد الزهراني</div>
+                    <div style="font-size:0.75rem;color:var(--text-muted)">ID: #15245</div>
+                  </div>
+                </div>
+              </td>
+              <td>mohammed@example.com</td>
+              <td><span class="badge badge-warning">مؤسسي</span></td>
+              <td>7</td>
+              <td><span class="badge badge-warning">تجربة</span></td>
+              <td style="color:var(--text-muted)">26 مارس 2024</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-edit"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem;color:var(--secondary)"><i class="fas fa-ban"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- System Health -->
+    <div class="grid-2" style="gap:1.5rem">
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">صحة النظام</span>
+          <span class="badge badge-success">جميع الأنظمة تعمل</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.875rem">
+              <span style="color:var(--text-secondary)">استخدام CPU</span>
+              <span style="color:var(--accent)">23%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:23%;background:var(--accent)"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.875rem">
+              <span style="color:var(--text-secondary)">استخدام الذاكرة</span>
+              <span style="color:var(--primary-light)">67%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:67%"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.875rem">
+              <span style="color:var(--text-secondary)">مساحة التخزين</span>
+              <span style="color:#FFBD2E">45%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:45%;background:#FFBD2E"></div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;font-size:0.875rem">
+              <span style="color:var(--text-secondary)">عرض النطاق الترددي</span>
+              <span style="color:var(--accent)">12%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width:12%;background:var(--accent)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">أحدث الأنشطة</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;max-height:250px;overflow-y:auto">
+          <div style="display:flex;gap:0.75rem;align-items:flex-start">
+            <div style="width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:5px;flex-shrink:0"></div>
+            <div>
+              <div style="font-size:0.875rem;color:var(--text-secondary)">مستخدم جديد: أحمد الشمري</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">منذ 5 دقائق</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start">
+            <div style="width:8px;height:8px;background:var(--primary-light);border-radius:50%;margin-top:5px;flex-shrink:0"></div>
+            <div>
+              <div style="font-size:0.875rem;color:var(--text-secondary)">ترقية اشتراك: سارة العتيبي → احترافي</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">منذ 15 دقيقة</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start">
+            <div style="width:8px;height:8px;background:#FFBD2E;border-radius:50%;margin-top:5px;flex-shrink:0"></div>
+            <div>
+              <div style="font-size:0.875rem;color:var(--text-secondary)">تذكرة دعم جديدة #TK-1234</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">منذ 30 دقيقة</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start">
+            <div style="width:8px;height:8px;background:var(--accent);border-radius:50%;margin-top:5px;flex-shrink:0"></div>
+            <div>
+              <div style="font-size:0.875rem;color:var(--text-secondary)">نشر مقال جديد في المدونة</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">منذ ساعة</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:0.75rem;align-items:flex-start">
+            <div style="width:8px;height:8px;background:var(--secondary);border-radius:50%;margin-top:5px;flex-shrink:0"></div>
+            <div>
+              <div style="font-size:0.875rem;color:var(--text-secondary)">تحديث وكيل التسعير v2.1</div>
+              <div style="font-size:0.75rem;color:var(--text-muted)">منذ 2 ساعة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Users Growth Chart
+  const usersCtx = document.getElementById('users-chart')?.getContext('2d');
+  if (usersCtx) {
+    new Chart(usersCtx, {
+      type: 'bar',
+      data: {
+        labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+        datasets: [{
+          label: 'مستخدمون جدد',
+          data: [800, 1200, 950, 1500, 1800, 2100, 1700, 2400, 2800, 3200, 2900, 3500],
+          backgroundColor: 'rgba(108, 99, 255, 0.7)',
+          borderColor: '#6C63FF',
+          borderWidth: 1,
+          borderRadius: 6,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#12142A',
+            borderColor: 'rgba(108, 99, 255, 0.3)',
+            borderWidth: 1,
+            titleColor: '#fff',
+            bodyColor: '#B0B3C6',
+          }
+        },
+        scales: {
+          x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#6B6F8A' } },
+          y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#6B6F8A' } }
+        }
+      }
+    });
+  }
+  
+  // Subscriptions Chart
+  const subsCtx = document.getElementById('subscriptions-chart')?.getContext('2d');
+  if (subsCtx) {
+    new Chart(subsCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['مبتدئ', 'احترافي', 'مؤسسي', 'تجربة مجانية'],
+        datasets: [{
+          data: [4521, 7234, 1892, 1600],
+          backgroundColor: ['#43E97B', '#6C63FF', '#FF6584', '#FFBD2E'],
+          borderWidth: 0,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        cutout: '65%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#B0B3C6', padding: 15, font: { family: 'Cairo' } }
+          },
+          tooltip: {
+            backgroundColor: '#12142A',
+            borderColor: 'rgba(108, 99, 255, 0.3)',
+            borderWidth: 1,
+            titleColor: '#fff',
+            bodyColor: '#B0B3C6',
+          }
+        }
+      }
+    });
+  }
+});
+</script>
+</body>
+</html>

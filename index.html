@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClawCommerce - منصة SaaS ذكية لإدارة المتاجر الإلكترونية باستخدام وكلاء الذكاء الاصطناعي المتخصصين">
+  <meta name="keywords" content="تجارة إلكترونية, ذكاء اصطناعي, إدارة متجر, SaaS, ClawCommerce">
+  <meta name="author" content="ClawCommerce">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="ClawCommerce - منصة SaaS ذكية للتجارة الإلكترونية">
+  <meta property="og:description" content="أدر متجرك الإلكتروني بذكاء اصطناعي متقدم مع ClawCommerce">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://clawcommerce.com">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ClawCommerce - منصة SaaS ذكية">
+  <meta name="twitter:description" content="أدر متجرك الإلكتروني بذكاء اصطناعي متقدم">
+  
+  <title>ClawCommerce - منصة SaaS ذكية لإدارة المتاجر الإلكترونية</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://clawcommerce.com">
+</head>
+<body>
+
+<!-- ===================================
+     Navigation
+     =================================== -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      
+      <!-- Logo -->
+      <a href="index.html" class="navbar-logo">
+        <div class="logo-icon">🦞</div>
+        <span>ClawCommerce</span>
+      </a>
+      
+      <!-- Desktop Nav -->
+      <ul class="navbar-nav">
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="#features" class="nav-link" data-i18n="nav.features">المميزات</a></li>
+        <li class="nav-dropdown">
+          <a href="#agents" class="nav-link" data-i18n="nav.agents">وكلاء الذكاء الاصطناعي <i class="fas fa-chevron-down" style="font-size:0.7rem;margin-right:4px"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="pages/agents.html#sales" class="nav-dropdown-item">
+              <div class="icon">🛒</div>
+              <div>
+                <div style="font-weight:600;color:white;font-size:0.85rem">وكيل المبيعات</div>
+                <div style="font-size:0.75rem;color:var(--text-muted)">تحسين معدلات التحويل</div>
+              </div>
+            </a>
+            <a href="pages/agents.html#inventory" class="nav-dropdown-item">
+              <div class="icon">📦</div>
+              <div>
+                <div style="font-weight:600;color:white;font-size:0.85rem">وكيل المخزون</div>
+                <div style="font-size:0.75rem;color:var(--text-muted)">إدارة ذكية للمخزون</div>
+              </div>
+            </a>
+            <a href="pages/agents.html#marketing" class="nav-dropdown-item">
+              <div class="icon">📢</div>
+              <div>
+                <div style="font-weight:600;color:white;font-size:0.85rem">وكيل التسويق</div>
+                <div style="font-size:0.75rem;color:var(--text-muted)">حملات تسويقية ذكية</div>
+              </div>
+            </a>
+            <a href="pages/agents.html#support" class="nav-dropdown-item">
+              <div class="icon">🎧</div>
+              <div>
+                <div style="font-weight:600;color:white;font-size:0.85rem">وكيل الدعم</div>
+                <div style="font-size:0.75rem;color:var(--text-muted)">خدمة عملاء 24/7</div>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">الأسعار</a></li>
+        <li><a href="pages/blog.html" class="nav-link" data-i18n="nav.blog">المدونة</a></li>
+        <li><a href="pages/contact.html" class="nav-link" data-i18n="nav.contact">اتصل بنا</a></li>
+      </ul>
+      
+      <!-- Actions -->
+      <div class="navbar-actions">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="ar">عربي</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        
+        <a href="pages/login.html" class="btn btn-ghost btn-sm" data-i18n="nav.login">تسجيل الدخول</a>
+        <a href="pages/signup.html" class="btn btn-primary btn-sm" data-i18n="nav.signup">ابدأ مجاناً</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <div class="mobile-menu-header">
+    <a href="index.html" class="navbar-logo">
+      <div class="logo-icon">🦞</div>
+      <span>ClawCommerce</span>
+    </a>
+    <button class="mobile-menu-close">✕</button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="#home" class="mobile-nav-link"><i class="fas fa-home"></i> الرئيسية</a>
+    <a href="#features" class="mobile-nav-link"><i class="fas fa-star"></i> المميزات</a>
+    <a href="#agents" class="mobile-nav-link"><i class="fas fa-robot"></i> وكلاء الذكاء الاصطناعي</a>
+    <a href="#pricing" class="mobile-nav-link"><i class="fas fa-tag"></i> الأسعار</a>
+    <a href="pages/blog.html" class="mobile-nav-link"><i class="fas fa-blog"></i> المدونة</a>
+    <a href="pages/contact.html" class="mobile-nav-link"><i class="fas fa-envelope"></i> اتصل بنا</a>
+  </nav>
+  <div style="display:flex;flex-direction:column;gap:0.75rem;margin-top:auto;padding-top:2rem">
+    <a href="pages/login.html" class="btn btn-ghost">تسجيل الدخول</a>
+    <a href="pages/signup.html" class="btn btn-primary">ابدأ مجاناً</a>
+  </div>
+</div>
+
+<!-- ===================================
+     Hero Section
+     =================================== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <!-- Hero Text -->
+      <div class="hero-text animate-on-scroll">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span data-i18n="hero.badge">منصة SaaS الأكثر تطوراً</span>
+          <span class="badge badge-success">جديد</span>
+        </div>
+        
+        <h1 class="hero-title">
+          <span data-i18n="hero.title">أدر متجرك الإلكتروني</span>
+          <span class="highlight" data-i18n="hero.title.highlight">بذكاء اصطناعي متقدم</span>
+        </h1>
+        
+        <p class="hero-description" data-i18n="hero.description">
+          ClawCommerce يوفر لك وكلاء ذكاء اصطناعي متخصصين لإدارة كل جانب من جوانب متجرك الإلكتروني - من المخزون والتسعير إلى خدمة العملاء والتسويق.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="pages/signup.html" class="btn btn-primary btn-lg">
+            <i class="fas fa-rocket"></i>
+            <span data-i18n="hero.cta.primary">ابدأ تجربتك المجانية</span>
+          </a>
+          <button class="btn btn-secondary btn-lg" data-modal-open="demo-modal">
+            <i class="fas fa-play-circle"></i>
+            <span data-i18n="hero.cta.secondary">شاهد العرض التوضيحي</span>
+          </button>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-counter="15000" data-suffix="+">0</span>
+            <span class="hero-stat-label" data-i18n="hero.stat.stores">متجر نشط</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-counter="500" data-suffix="M+">0</span>
+            <span class="hero-stat-label" data-i18n="hero.stat.revenue">إيرادات محققة</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number" data-counter="50" data-suffix="+">0</span>
+            <span class="hero-stat-label" data-i18n="hero.stat.agents">وكيل ذكي</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">99.9%</span>
+            <span class="hero-stat-label" data-i18n="hero.stat.uptime">وقت التشغيل</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Visual -->
+      <div class="hero-visual animate-on-scroll delay-2">
+        <!-- Floating Cards -->
+        <div class="floating-card floating-card-1">
+          <div class="floating-card-icon" style="background:rgba(67,233,123,0.15)">📈</div>
+          <div>
+            <div style="font-weight:700;color:white">+127%</div>
+            <div style="color:var(--text-muted);font-size:0.75rem">زيادة المبيعات</div>
+          </div>
+        </div>
+        
+        <div class="floating-card floating-card-2">
+          <div class="floating-card-icon" style="background:rgba(108,99,255,0.15)">🤖</div>
+          <div>
+            <div style="font-weight:700;color:white">AI Active</div>
+            <div style="color:var(--accent);font-size:0.75rem">● يعمل الآن</div>
+          </div>
+        </div>
+        
+        <!-- Dashboard Preview -->
+        <div class="hero-dashboard">
+          <div class="dashboard-header">
+            <div class="dashboard-dots">
+              <div class="dashboard-dot"></div>
+              <div class="dashboard-dot"></div>
+              <div class="dashboard-dot"></div>
+            </div>
+            <span class="dashboard-title">ClawCommerce Dashboard</span>
+          </div>
+          <div class="dashboard-body">
+            <div class="dashboard-metrics">
+              <div class="metric-card">
+                <span class="metric-value">1,247</span>
+                <span class="metric-label">الطلبات</span>
+                <span class="metric-change">↑ 12%</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">98.5K</span>
+                <span class="metric-label">الإيرادات</span>
+                <span class="metric-change">↑ 24%</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-value">4.9★</span>
+                <span class="metric-label">التقييم</span>
+                <span class="metric-change">↑ 0.2</span>
+              </div>
+            </div>
+            <div class="dashboard-chart">
+              <div class="chart-bar" style="height:40%"></div>
+              <div class="chart-bar" style="height:65%"></div>
+              <div class="chart-bar" style="height:45%"></div>
+              <div class="chart-bar" style="height:80%"></div>
+              <div class="chart-bar" style="height:55%"></div>
+              <div class="chart-bar" style="height:90%"></div>
+              <div class="chart-bar" style="height:70%"></div>
+              <div class="chart-bar" style="height:85%"></div>
+              <div class="chart-bar" style="height:60%"></div>
+              <div class="chart-bar" style="height:95%"></div>
+              <div class="chart-bar" style="height:75%"></div>
+              <div class="chart-bar" style="height:100%"></div>
+            </div>
+            
+            <!-- AI Agents Status -->
+            <div style="margin-top:1rem;display:flex;flex-direction:column;gap:0.5rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.8rem">
+                <span style="color:var(--text-secondary)">🤖 وكيل المبيعات</span>
+                <span class="badge badge-success">نشط</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.8rem">
+                <span style="color:var(--text-secondary)">📦 وكيل المخزون</span>
+                <span class="badge badge-success">نشط</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;font-size:0.8rem">
+                <span style="color:var(--text-secondary)">📢 وكيل التسويق</span>
+                <span class="badge badge-warning">يعمل</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Partners Section
+     =================================== -->
+<section class="partners">
+  <div class="container">
+    <p class="partners-title">يثق بنا أكثر من 15,000 تاجر حول العالم</p>
+    <div class="partners-track">
+      <div class="partners-inner">
+        <div class="partner-logo"><i class="fas fa-store"></i> Shopify</div>
+        <div class="partner-logo"><i class="fab fa-amazon"></i> Amazon</div>
+        <div class="partner-logo"><i class="fas fa-shopping-cart"></i> WooCommerce</div>
+        <div class="partner-logo"><i class="fas fa-box"></i> Salla</div>
+        <div class="partner-logo"><i class="fas fa-globe"></i> Zid</div>
+        <div class="partner-logo"><i class="fab fa-stripe"></i> Stripe</div>
+        <div class="partner-logo"><i class="fas fa-credit-card"></i> PayPal</div>
+        <div class="partner-logo"><i class="fas fa-truck"></i> Aramex</div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="partner-logo"><i class="fas fa-store"></i> Shopify</div>
+        <div class="partner-logo"><i class="fab fa-amazon"></i> Amazon</div>
+        <div class="partner-logo"><i class="fas fa-shopping-cart"></i> WooCommerce</div>
+        <div class="partner-logo"><i class="fas fa-box"></i> Salla</div>
+        <div class="partner-logo"><i class="fas fa-globe"></i> Zid</div>
+        <div class="partner-logo"><i class="fab fa-stripe"></i> Stripe</div>
+        <div class="partner-logo"><i class="fas fa-credit-card"></i> PayPal</div>
+        <div class="partner-logo"><i class="fas fa-truck"></i> Aramex</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Features Section
+     =================================== -->
+<section class="features section" id="features">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-star"></i>
+        <span data-i18n="features.badge">المميزات</span>
+      </div>
+      <h2 class="section-title" data-i18n="features.title">كل ما تحتاجه لنجاح متجرك</h2>
+      <p class="section-subtitle" data-i18n="features.subtitle">منصة متكاملة تجمع أحدث تقنيات الذكاء الاصطناعي مع أدوات إدارة التجارة الإلكترونية</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card animate-on-scroll delay-1">
+        <div class="feature-icon">🤖</div>
+        <h3 class="feature-title">وكلاء ذكاء اصطناعي متخصصون</h3>
+        <p class="feature-description">50+ وكيل ذكي متخصص في كل مجال من مجالات التجارة الإلكترونية، يعملون على مدار الساعة لتحسين أداء متجرك.</p>
+        <a href="pages/agents.html" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-2">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">تحليلات متقدمة في الوقت الفعلي</h3>
+        <p class="feature-description">لوحات معلومات تفاعلية مع رسوم بيانية متقدمة تعطيك رؤية شاملة لأداء متجرك وتوقعات المبيعات.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-3">
+        <div class="feature-icon">🛒</div>
+        <h3 class="feature-title">تكامل مع جميع المنصات</h3>
+        <p class="feature-description">تكامل سلس مع Shopify وWooCommerce وSalla وZid وأكثر من 100 منصة تجارة إلكترونية أخرى.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-1">
+        <div class="feature-icon">💬</div>
+        <h3 class="feature-title">خدمة عملاء ذكية 24/7</h3>
+        <p class="feature-description">وكيل دعم ذكي يرد على استفسارات العملاء فوراً عبر WhatsApp وTelegram والموقع الإلكتروني.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-2">
+        <div class="feature-icon">📦</div>
+        <h3 class="feature-title">إدارة مخزون ذكية</h3>
+        <p class="feature-description">توقع الطلب وإعادة الطلب التلقائي وتحسين مستويات المخزون باستخدام خوارزميات التعلم الآلي.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-3">
+        <div class="feature-icon">💰</div>
+        <h3 class="feature-title">تسعير ديناميكي ذكي</h3>
+        <p class="feature-description">تحسين الأسعار تلقائياً بناءً على المنافسين والطلب والموسمية لزيادة هامش الربح.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-1">
+        <div class="feature-icon">📢</div>
+        <h3 class="feature-title">تسويق ذكي ومستهدف</h3>
+        <p class="feature-description">حملات تسويقية مخصصة لكل عميل بناءً على سلوكه وتفضيلاته لزيادة معدلات التحويل.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-2">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">أمان وحماية متقدمة</h3>
+        <p class="feature-description">تشفير SSL/TLS، حماية من الاحتيال، نسخ احتياطي تلقائي، وامتثال كامل لمعايير PCI DSS.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+      
+      <div class="feature-card animate-on-scroll delay-3">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">أداء فائق السرعة</h3>
+        <p class="feature-description">بنية تحتية سحابية متقدمة مع CDN عالمي تضمن تحميل متجرك في أقل من ثانية واحدة.</p>
+        <a href="#" class="feature-link">اكتشف المزيد <i class="fas fa-arrow-left"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Stats Section
+     =================================== -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item animate-on-scroll">
+        <span class="stat-number" data-counter="15000" data-suffix="+">0</span>
+        <span class="stat-label">متجر نشط</span>
+      </div>
+      <div class="stat-item animate-on-scroll delay-1">
+        <span class="stat-number" data-counter="500" data-suffix="M+">0</span>
+        <span class="stat-label">ريال إيرادات محققة</span>
+      </div>
+      <div class="stat-item animate-on-scroll delay-2">
+        <span class="stat-number" data-counter="50" data-suffix="+">0</span>
+        <span class="stat-label">وكيل ذكاء اصطناعي</span>
+      </div>
+      <div class="stat-item animate-on-scroll delay-3">
+        <span class="stat-number">99.9%</span>
+        <span class="stat-label">وقت التشغيل المضمون</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     AI Agents Section
+     =================================== -->
+<section class="agents section" id="agents">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-robot"></i>
+        وكلاء الذكاء الاصطناعي
+      </div>
+      <h2 class="section-title">فريق ذكي يعمل لصالحك</h2>
+      <p class="section-subtitle">كل وكيل متخصص في مجاله ويتعاون مع الآخرين لتحقيق أفضل النتائج لمتجرك</p>
+    </div>
+    
+    <div class="agents-showcase">
+      <!-- Agents List -->
+      <div class="agents-list">
+        <div class="agent-item active" data-agent="sales">
+          <div class="agent-item-icon" style="background:rgba(108,99,255,0.15)">🛒</div>
+          <div class="agent-item-info">
+            <h4>وكيل المبيعات</h4>
+            <p>تحسين معدلات التحويل وزيادة الإيرادات</p>
+          </div>
+          <i class="fas fa-chevron-left" style="color:var(--primary);margin-right:auto"></i>
+        </div>
+        
+        <div class="agent-item" data-agent="inventory">
+          <div class="agent-item-icon" style="background:rgba(67,233,123,0.15)">📦</div>
+          <div class="agent-item-info">
+            <h4>وكيل المخزون</h4>
+            <p>إدارة ذكية وتوقع الطلب</p>
+          </div>
+          <i class="fas fa-chevron-left" style="color:var(--text-muted);margin-right:auto"></i>
+        </div>
+        
+        <div class="agent-item" data-agent="marketing">
+          <div class="agent-item-icon" style="background:rgba(255,101,132,0.15)">📢</div>
+          <div class="agent-item-info">
+            <h4>وكيل التسويق</h4>
+            <p>حملات مخصصة وتسويق ذكي</p>
+          </div>
+          <i class="fas fa-chevron-left" style="color:var(--text-muted);margin-right:auto"></i>
+        </div>
+        
+        <div class="agent-item" data-agent="support">
+          <div class="agent-item-icon" style="background:rgba(56,249,215,0.15)">🎧</div>
+          <div class="agent-item-info">
+            <h4>وكيل الدعم</h4>
+            <p>خدمة عملاء على مدار الساعة</p>
+          </div>
+          <i class="fas fa-chevron-left" style="color:var(--text-muted);margin-right:auto"></i>
+        </div>
+        
+        <div class="agent-item" data-agent="pricing">
+          <div class="agent-item-icon" style="background:rgba(255,189,46,0.15)">💰</div>
+          <div class="agent-item-info">
+            <h4>وكيل التسعير</h4>
+            <p>تسعير ديناميكي لزيادة الأرباح</p>
+          </div>
+          <i class="fas fa-chevron-left" style="color:var(--text-muted);margin-right:auto"></i>
+        </div>
+        
+        <a href="pages/agents.html" class="btn btn-outline" style="margin-top:0.5rem">
+          عرض جميع الوكلاء (50+) <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
+      
+      <!-- Agent Preview -->
+      <div class="agent-preview animate-on-scroll delay-2">
+        <div class="agent-preview-header">
+          <div style="width:40px;height:40px;background:rgba(108,99,255,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem">🛒</div>
+          <div>
+            <div style="font-weight:700;color:white">وكيل المبيعات</div>
+            <div style="font-size:0.8rem;color:var(--accent)">● نشط الآن</div>
+          </div>
+          <div style="margin-right:auto;display:flex;gap:0.5rem">
+            <span class="badge badge-success">AI Powered</span>
+          </div>
+        </div>
+        <div class="agent-preview-body">
+          <div class="agent-chat">
+            <div class="chat-message ai">
+              <div class="chat-avatar" style="background:rgba(108,99,255,0.2)">🤖</div>
+              <div class="chat-bubble">
+                مرحباً! لقد حللت بيانات متجرك وأكتشفت فرصة لزيادة المبيعات بنسبة 35% هذا الشهر. هل تريد أن أشرح لك الخطة؟
+              </div>
+            </div>
+            <div class="chat-message user">
+              <div class="chat-avatar" style="background:var(--gradient-primary)">👤</div>
+              <div class="chat-bubble">نعم، أخبرني بالتفاصيل</div>
+            </div>
+            <div class="chat-message ai">
+              <div class="chat-avatar" style="background:rgba(108,99,255,0.2)">🤖</div>
+              <div class="chat-bubble">
+                بناءً على تحليل سلوك 1,247 عميل، أقترح:
+                <br>• تفعيل عروض الـ Upsell على المنتجات الأكثر مشاهدة
+                <br>• إرسال تذكيرات للسلات المتروكة (127 سلة)
+                <br>• تخفيض 10% على المنتجات بطيئة الحركة
+              </div>
+            </div>
+          </div>
+          
+          <!-- Performance Metrics -->
+          <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)">
+            <div style="font-size:0.85rem;font-weight:600;color:white;margin-bottom:1rem">أداء الوكيل هذا الشهر</div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem">
+              <div style="text-align:center;background:var(--bg-darker);border-radius:10px;padding:0.75rem">
+                <div style="font-size:1.2rem;font-weight:800;color:var(--accent)">+35%</div>
+                <div style="font-size:0.7rem;color:var(--text-muted)">زيادة المبيعات</div>
+              </div>
+              <div style="text-align:center;background:var(--bg-darker);border-radius:10px;padding:0.75rem">
+                <div style="font-size:1.2rem;font-weight:800;color:var(--primary-light)">127</div>
+                <div style="font-size:0.7rem;color:var(--text-muted)">سلة محفوظة</div>
+              </div>
+              <div style="text-align:center;background:var(--bg-darker);border-radius:10px;padding:0.75rem">
+                <div style="font-size:1.2rem;font-weight:800;color:var(--secondary)">4.9★</div>
+                <div style="font-size:0.7rem;color:var(--text-muted)">رضا العملاء</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Pricing Section
+     =================================== -->
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-tag"></i>
+        <span data-i18n="pricing.badge">الأسعار</span>
+      </div>
+      <h2 class="section-title" data-i18n="pricing.title">خطط مرنة لكل الأحجام</h2>
+      <p class="section-subtitle" data-i18n="pricing.subtitle">اختر الخطة المناسبة لحجم أعمالك مع إمكانية الترقية في أي وقت</p>
+    </div>
+    
+    <!-- Pricing Toggle -->
+    <div class="pricing-toggle animate-on-scroll">
+      <span class="pricing-toggle-label" data-i18n="pricing.monthly">شهري</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="pricing-toggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="pricing-toggle-label" data-i18n="pricing.yearly">سنوي</span>
+      <span class="pricing-badge" data-i18n="pricing.save">وفر 20%</span>
+    </div>
+    
+    <div class="pricing-grid">
+      <!-- Starter Plan -->
+      <div class="pricing-card animate-on-scroll delay-1">
+        <div class="pricing-plan-name">المبتدئ</div>
+        <div class="pricing-price">
+          <span class="pricing-currency">ر.س</span>
+          <span class="pricing-amount" data-monthly="199" data-yearly="159">199</span>
+          <span class="pricing-period">/شهر</span>
+        </div>
+        <p class="pricing-description">مثالي للمتاجر الصغيرة التي تبدأ رحلتها في التجارة الإلكترونية</p>
+        
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            حتى 500 منتج
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            5 وكلاء ذكاء اصطناعي
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تكامل مع منصة واحدة
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تقارير أساسية
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            دعم عبر البريد الإلكتروني
+          </li>
+          <li class="pricing-feature">
+            <span class="cross"><i class="fas fa-times"></i></span>
+            <span style="opacity:0.5">تسعير ديناميكي</span>
+          </li>
+          <li class="pricing-feature">
+            <span class="cross"><i class="fas fa-times"></i></span>
+            <span style="opacity:0.5">API مخصص</span>
+          </li>
+        </ul>
+        
+        <a href="pages/signup.html?plan=starter" class="btn btn-outline" style="width:100%" data-i18n="pricing.cta">ابدأ الآن</a>
+      </div>
+      
+      <!-- Professional Plan (Featured) -->
+      <div class="pricing-card featured animate-on-scroll delay-2">
+        <div class="pricing-popular" data-i18n="pricing.popular">الأكثر شيوعاً</div>
+        <div class="pricing-plan-name">الاحترافي</div>
+        <div class="pricing-price">
+          <span class="pricing-currency">ر.س</span>
+          <span class="pricing-amount" data-monthly="599" data-yearly="479">599</span>
+          <span class="pricing-period">/شهر</span>
+        </div>
+        <p class="pricing-description">للمتاجر المتوسطة التي تريد نمواً سريعاً ومستداماً</p>
+        
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            منتجات غير محدودة
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            20 وكيل ذكاء اصطناعي
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تكامل مع 10 منصات
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تقارير متقدمة
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            دعم 24/7 عبر الدردشة
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تسعير ديناميكي
+          </li>
+          <li class="pricing-feature">
+            <span class="cross"><i class="fas fa-times"></i></span>
+            <span style="opacity:0.5">API مخصص</span>
+          </li>
+        </ul>
+        
+        <a href="pages/signup.html?plan=pro" class="btn btn-primary" style="width:100%" data-i18n="pricing.cta">ابدأ الآن</a>
+      </div>
+      
+      <!-- Enterprise Plan -->
+      <div class="pricing-card animate-on-scroll delay-3">
+        <div class="pricing-plan-name">المؤسسي</div>
+        <div class="pricing-price">
+          <span class="pricing-currency">ر.س</span>
+          <span class="pricing-amount" data-monthly="1499" data-yearly="1199">1499</span>
+          <span class="pricing-period">/شهر</span>
+        </div>
+        <p class="pricing-description">للمتاجر الكبيرة والمؤسسات التي تحتاج قدرات غير محدودة</p>
+        
+        <ul class="pricing-features">
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            كل شيء في الاحترافي
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            50+ وكيل ذكاء اصطناعي
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تكامل مع جميع المنصات
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            لوحة إدارة مخصصة
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            مدير حساب مخصص
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            تسعير ديناميكي متقدم
+          </li>
+          <li class="pricing-feature">
+            <span class="check"><i class="fas fa-check"></i></span>
+            API مخصص كامل
+          </li>
+        </ul>
+        
+        <a href="pages/contact.html" class="btn btn-outline" style="width:100%">تواصل معنا</a>
+      </div>
+    </div>
+    
+    <!-- Pricing Note -->
+    <div style="text-align:center;margin-top:2rem;color:var(--text-muted);font-size:0.875rem">
+      <i class="fas fa-shield-alt" style="color:var(--accent)"></i>
+      جميع الخطط تشمل تجربة مجانية 14 يوم • لا يلزم بطاقة ائتمان • إلغاء في أي وقت
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Savings Calculator
+     =================================== -->
+<section class="section" style="background:var(--bg-dark)">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-calculator"></i>
+        حاسبة التوفير
+      </div>
+      <h2 class="section-title">احسب مدخراتك مع ClawCommerce</h2>
+      <p class="section-subtitle">اكتشف كم يمكنك توفيره وزيادته باستخدام منصتنا</p>
+    </div>
+    
+    <div id="savings-calculator" style="max-width:700px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:2.5rem">
+      <div class="grid-2" style="gap:1.5rem;margin-bottom:2rem">
+        <div class="form-group" style="margin:0">
+          <label class="form-label">عدد الطلبات الشهرية</label>
+          <input type="number" id="calc-orders" class="form-input" placeholder="مثال: 500" value="500">
+        </div>
+        <div class="form-group" style="margin:0">
+          <label class="form-label">الإيرادات الشهرية (ريال)</label>
+          <input type="number" id="calc-revenue" class="form-input" placeholder="مثال: 50000" value="50000">
+        </div>
+      </div>
+      
+      <div id="calc-result" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+        <!-- Results will be injected by JS -->
+      </div>
+      
+      <div style="margin-top:1.5rem;text-align:center">
+        <a href="pages/signup.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-rocket"></i>
+          ابدأ توفيرك الآن
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Testimonials Section
+     =================================== -->
+<section class="testimonials section" id="testimonials">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-star"></i>
+        <span data-i18n="testimonials.badge">آراء العملاء</span>
+      </div>
+      <h2 class="section-title" data-i18n="testimonials.title">ماذا يقول عملاؤنا</h2>
+      <p class="section-subtitle" data-i18n="testimonials.subtitle">آلاف التجار يثقون في ClawCommerce لإدارة متاجرهم</p>
+    </div>
+    
+    <div class="testimonials-slider animate-on-scroll">
+      <div class="testimonials-track">
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"ClawCommerce غيّر طريقة إدارتي لمتجري بالكامل. وكيل المبيعات الذكي زاد مبيعاتي بنسبة 45% في أول شهر فقط!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">أ</div>
+            <div>
+              <div class="testimonial-name">أحمد الشمري</div>
+              <div class="testimonial-role">صاحب متجر إلكتروني - الرياض</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"وكيل المخزون الذكي أنقذني من خسائر كبيرة. الآن لا أعاني من نفاد المخزون أو التخزين الزائد. منصة رائعة!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">س</div>
+            <div>
+              <div class="testimonial-name">سارة العتيبي</div>
+              <div class="testimonial-role">مديرة متجر أزياء - جدة</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"خدمة العملاء الذكية تعمل 24/7 وترد على عملائي بشكل احترافي. وفرت على أكثر من 15 ساعة أسبوعياً!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">م</div>
+            <div>
+              <div class="testimonial-name">محمد الزهراني</div>
+              <div class="testimonial-role">رائد أعمال - الدمام</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"التكامل مع Salla كان سلساً جداً. الآن كل شيء يعمل تلقائياً ويمكنني التركيز على تطوير منتجاتي."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ن</div>
+            <div>
+              <div class="testimonial-name">نورة الحربي</div>
+              <div class="testimonial-role">صاحبة متجر عطور - مكة</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"التسعير الديناميكي الذكي زاد هامش ربحي بنسبة 22%. الوكيل يراقب المنافسين ويعدل الأسعار تلقائياً."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ع</div>
+            <div>
+              <div class="testimonial-name">عبدالله القحطاني</div>
+              <div class="testimonial-role">تاجر إلكتروني - الكويت</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-rating">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <p class="testimonial-text">"أفضل استثمار قمت به لمتجري. العائد على الاستثمار كان 10x في أول 3 أشهر. أنصح به بشدة!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ف</div>
+            <div>
+              <div class="testimonial-name">فاطمة المنصور</div>
+              <div class="testimonial-role">مديرة تجارة إلكترونية - دبي</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="slider-controls">
+        <button class="slider-btn prev"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-dots">
+          <div class="slider-dot active"></div>
+          <div class="slider-dot"></div>
+          <div class="slider-dot"></div>
+          <div class="slider-dot"></div>
+        </div>
+        <button class="slider-btn next"><i class="fas fa-chevron-left"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Competitor Comparison
+     =================================== -->
+<section class="section" style="background:var(--bg-darker)">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-chart-bar"></i>
+        مقارنة المنافسين
+      </div>
+      <h2 class="section-title">لماذا ClawCommerce الأفضل؟</h2>
+      <p class="section-subtitle">مقارنة شاملة مع المنافسين الرئيسيين في السوق</p>
+    </div>
+    
+    <div style="overflow-x:auto;animate-on-scroll">
+      <table style="width:100%;border-collapse:collapse;min-width:600px">
+        <thead>
+          <tr>
+            <th style="padding:1rem;text-align:right;color:var(--text-muted);font-weight:600;border-bottom:1px solid var(--border)">الميزة</th>
+            <th style="padding:1rem;text-align:center;background:rgba(108,99,255,0.1);border-radius:10px 10px 0 0;color:var(--primary-light);font-weight:700">ClawCommerce</th>
+            <th style="padding:1rem;text-align:center;color:var(--text-muted);font-weight:600">المنافس أ</th>
+            <th style="padding:1rem;text-align:center;color:var(--text-muted);font-weight:600">المنافس ب</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:1rem;color:var(--text-secondary)">وكلاء ذكاء اصطناعي</td>
+            <td style="padding:1rem;text-align:center;background:rgba(108,99,255,0.05);color:var(--accent)">50+ وكيل ✓</td>
+            <td style="padding:1rem;text-align:center;color:var(--text-muted)">5 وكلاء</td>
+            <td style="padding:1rem;text-align:center;color:var(--secondary)">✗</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:1rem;color:var(--text-secondary)">تسعير ديناميكي</td>
+            <td style="padding:1rem;text-align:center;background:rgba(108,99,255,0.05);color:var(--accent)">✓ متقدم</td>
+            <td style="padding:1rem;text-align:center;color:var(--accent)">✓ أساسي</td>
+            <td style="padding:1rem;text-align:center;color:var(--secondary)">✗</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:1rem;color:var(--text-secondary)">دعم اللغة العربية</td>
+            <td style="padding:1rem;text-align:center;background:rgba(108,99,255,0.05);color:var(--accent)">✓ كامل</td>
+            <td style="padding:1rem;text-align:center;color:var(--secondary)">✗</td>
+            <td style="padding:1rem;text-align:center;color:var(--secondary)">✗</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border)">
+            <td style="padding:1rem;color:var(--text-secondary)">تكامل المنصات</td>
+            <td style="padding:1rem;text-align:center;background:rgba(108,99,255,0.05);color:var(--accent)">100+ منصة</td>
+            <td style="padding:1rem;text-align:center;color:var(--text-muted)">30 منصة</td>
+            <td style="padding:1rem;text-align:center;color:var(--text-muted)">15 منصة</td>
+          </tr>
+          <tr>
+            <td style="padding:1rem;color:var(--text-secondary)">السعر الشهري</td>
+            <td style="padding:1rem;text-align:center;background:rgba(108,99,255,0.05);color:var(--primary-light);font-weight:700">من 199 ر.س</td>
+            <td style="padding:1rem;text-align:center;color:var(--text-muted)">من 450 ر.س</td>
+            <td style="padding:1rem;text-align:center;color:var(--text-muted)">من 350 ر.س</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     FAQ Section
+     =================================== -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-question-circle"></i>
+        <span data-i18n="faq.badge">الأسئلة الشائعة</span>
+      </div>
+      <h2 class="section-title" data-i18n="faq.title">هل لديك أسئلة؟</h2>
+      <p class="section-subtitle" data-i18n="faq.subtitle">نجيب على أكثر الأسئلة شيوعاً حول منصتنا</p>
+    </div>
+    
+    <div class="faq-list animate-on-scroll">
+      <div class="faq-item">
+        <div class="faq-question">
+          ما هو ClawCommerce وكيف يعمل؟
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            ClawCommerce هو منصة SaaS متكاملة تستخدم وكلاء الذكاء الاصطناعي المتخصصين لإدارة كل جانب من جوانب متجرك الإلكتروني. كل وكيل متخصص في مجاله (المبيعات، المخزون، التسويق، الدعم، التسعير) ويعمل بشكل مستقل ومتكامل مع الآخرين لتحقيق أفضل النتائج.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          هل يمكنني تجربة المنصة مجاناً؟
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نعم! نقدم تجربة مجانية لمدة 14 يوماً كاملة بدون الحاجة لبطاقة ائتمان. يمكنك الوصول إلى جميع ميزات الخطة الاحترافية خلال فترة التجربة.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          ما هي المنصات التي يدعمها ClawCommerce؟
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            يدعم ClawCommerce أكثر من 100 منصة تجارة إلكترونية بما فيها Shopify، WooCommerce، Salla، Zid، Magento، BigCommerce، وغيرها. كما يدعم التكامل مع بوابات الدفع الرئيسية مثل Stripe وPayPal وHyperPay.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          كيف يحمي ClawCommerce بيانات متجري؟
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نستخدم أحدث معايير الأمان بما فيها تشفير SSL/TLS 256-bit، وامتثال كامل لمعايير PCI DSS، ونسخ احتياطي تلقائي يومي، وحماية متقدمة من الاحتيال. بياناتك محمية بأعلى مستويات الأمان.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          هل يمكنني إلغاء الاشتراك في أي وقت؟
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نعم، يمكنك إلغاء اشتراكك في أي وقت دون أي رسوم إضافية. لن يتم تجديد اشتراكك تلقائياً بعد الإلغاء، وستحتفظ بالوصول حتى نهاية فترة الاشتراك المدفوعة.
+          </div>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          ما هو مستوى الدعم الفني المقدم؟
+          <span class="faq-icon"><i class="fas fa-plus"></i></span>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            نقدم دعماً فنياً على مدار الساعة 24/7 عبر الدردشة المباشرة والبريد الإلكتروني وWhatsApp. للخطة المؤسسية، يتوفر مدير حساب مخصص ودعم هاتفي مباشر.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Team Section
+     =================================== -->
+<section class="section" style="background:var(--bg-dark)">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <div class="section-badge">
+        <i class="fas fa-users"></i>
+        فريق العمل
+      </div>
+      <h2 class="section-title">الفريق وراء ClawCommerce</h2>
+      <p class="section-subtitle">فريق من الخبراء في الذكاء الاصطناعي والتجارة الإلكترونية</p>
+    </div>
+    
+    <div class="grid-4">
+      <div class="card text-center animate-on-scroll delay-1">
+        <div style="width:80px;height:80px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">👨‍💻</div>
+        <h4 style="margin-bottom:0.25rem">عمر الرشيد</h4>
+        <p style="font-size:0.85rem;color:var(--primary-light);margin-bottom:0.75rem">المؤسس والرئيس التنفيذي</p>
+        <p style="font-size:0.8rem">خبرة 10+ سنوات في الذكاء الاصطناعي والتجارة الإلكترونية</p>
+        <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem">
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+      <div class="card text-center animate-on-scroll delay-2">
+        <div style="width:80px;height:80px;background:var(--gradient-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">👩‍🔬</div>
+        <h4 style="margin-bottom:0.25rem">ليلى المطيري</h4>
+        <p style="font-size:0.85rem;color:var(--accent);margin-bottom:0.75rem">مديرة تقنية الذكاء الاصطناعي</p>
+        <p style="font-size:0.8rem">دكتوراه في تعلم الآلة من MIT</p>
+        <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem">
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="card text-center animate-on-scroll delay-3">
+        <div style="width:80px;height:80px;background:linear-gradient(135deg,#FF6584,#FF8C69);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">👨‍🎨</div>
+        <h4 style="margin-bottom:0.25rem">خالد السبيعي</h4>
+        <p style="font-size:0.85rem;color:var(--secondary);margin-bottom:0.75rem">مدير تجربة المستخدم</p>
+        <p style="font-size:0.8rem">خبرة في تصميم منتجات SaaS لأكبر الشركات</p>
+        <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem">
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-dribbble"></i></a>
+        </div>
+      </div>
+      
+      <div class="card text-center animate-on-scroll delay-4">
+        <div style="width:80px;height:80px;background:linear-gradient(135deg,#38F9D7,#43E97B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem">👩‍💼</div>
+        <h4 style="margin-bottom:0.25rem">هند العمري</h4>
+        <p style="font-size:0.85rem;color:var(--accent-blue);margin-bottom:0.75rem">مديرة نجاح العملاء</p>
+        <p style="font-size:0.8rem">ساعدت أكثر من 5000 متجر على النمو</p>
+        <div style="display:flex;justify-content:center;gap:0.5rem;margin-top:1rem">
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" style="width:32px;height:32px"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     CTA Section
+     =================================== -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-inner animate-on-scroll">
+      <h2 class="cta-title" data-i18n="cta.title">جاهز لتحويل متجرك؟</h2>
+      <p class="cta-subtitle" data-i18n="cta.subtitle">انضم إلى آلاف التجار الذين يستخدمون ClawCommerce لتنمية أعمالهم</p>
+      <div class="cta-actions">
+        <a href="pages/signup.html" class="btn btn-white btn-lg">
+          <i class="fas fa-rocket"></i>
+          <span data-i18n="cta.primary">ابدأ مجاناً لمدة 14 يوم</span>
+        </a>
+        <a href="pages/contact.html" class="btn btn-outline-white btn-lg">
+          <i class="fas fa-phone"></i>
+          <span data-i18n="cta.secondary">تحدث مع فريق المبيعات</span>
+        </a>
+      </div>
+      <p style="margin-top:1.5rem;font-size:0.875rem;opacity:0.75;position:relative">
+        <i class="fas fa-shield-alt"></i>
+        لا يلزم بطاقة ائتمان • إلغاء في أي وقت • دعم 24/7
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================
+     Footer
+     =================================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-icon" style="width:36px;height:36px;background:var(--gradient-primary);border-radius:8px;display:flex;align-items:center;justify-content:center">🦞</div>
+          <span style="background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">ClawCommerce</span>
+        </div>
+        <p class="footer-description" data-i18n="footer.description">
+          منصة SaaS متكاملة لإدارة المتاجر الإلكترونية باستخدام وكلاء الذكاء الاصطناعي المتخصصين.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+      
+      <!-- Product Links -->
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.product">المنتج</h4>
+        <ul class="footer-links">
+          <li><a href="#features" class="footer-link">المميزات</a></li>
+          <li><a href="pages/agents.html" class="footer-link">وكلاء الذكاء الاصطناعي</a></li>
+          <li><a href="#pricing" class="footer-link">الأسعار</a></li>
+          <li><a href="pages/changelog.html" class="footer-link">سجل التحديثات</a></li>
+          <li><a href="pages/status.html" class="footer-link">حالة النظام</a></li>
+          <li><a href="pages/roadmap.html" class="footer-link">خارطة الطريق</a></li>
+        </ul>
+      </div>
+      
+      <!-- Company Links -->
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.company">الشركة</h4>
+        <ul class="footer-links">
+          <li><a href="pages/about.html" class="footer-link">من نحن</a></li>
+          <li><a href="pages/blog.html" class="footer-link">المدونة</a></li>
+          <li><a href="pages/careers.html" class="footer-link">الوظائف</a></li>
+          <li><a href="pages/press.html" class="footer-link">الصحافة</a></li>
+          <li><a href="pages/partners.html" class="footer-link">الشركاء</a></li>
+          <li><a href="pages/contact.html" class="footer-link">اتصل بنا</a></li>
+        </ul>
+      </div>
+      
+      <!-- Support Links -->
+      <div>
+        <h4 class="footer-col-title" data-i18n="footer.support">الدعم</h4>
+        <ul class="footer-links">
+          <li><a href="pages/docs.html" class="footer-link">التوثيق</a></li>
+          <li><a href="pages/support.html" class="footer-link">مركز المساعدة</a></li>
+          <li><a href="pages/community.html" class="footer-link">المجتمع</a></li>
+          <li><a href="pages/api.html" class="footer-link">API Reference</a></li>
+          <li><a href="pages/privacy.html" class="footer-link">سياسة الخصوصية</a></li>
+          <li><a href="pages/terms.html" class="footer-link">شروط الاستخدام</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p class="footer-copyright" data-i18n="footer.copyright">© 2024 ClawCommerce. جميع الحقوق محفوظة.</p>
+      <div class="footer-bottom-links">
+        <a href="pages/privacy.html" class="footer-bottom-link">الخصوصية</a>
+        <a href="pages/terms.html" class="footer-bottom-link">الشروط</a>
+        <a href="pages/cookies.html" class="footer-bottom-link">ملفات تعريف الارتباط</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================================
+     Floating Buttons
+     =================================== -->
+<button class="scroll-top" aria-label="العودة للأعلى">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<a href="https://wa.me/966500000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ===================================
+     Demo Modal
+     =================================== -->
+<div class="modal-overlay" id="demo-modal">
+  <div class="modal" style="max-width:700px">
+    <button class="modal-close" data-modal-close>✕</button>
+    <h3 style="margin-bottom:1rem;text-align:center">عرض توضيحي تفاعلي</h3>
+    <p style="text-align:center;color:var(--text-secondary);margin-bottom:1.5rem">شاهد كيف يعمل ClawCommerce في الوقت الفعلي</p>
+    
+    <!-- Video Placeholder -->
+    <div style="background:var(--bg-darker);border-radius:var(--radius-lg);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;cursor:pointer;border:1px solid var(--border)">
+      <div style="text-align:center">
+        <div style="width:80px;height:80px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem;cursor:pointer">▶</div>
+        <p style="color:var(--text-secondary)">انقر لمشاهدة العرض التوضيحي</p>
+      </div>
+    </div>
+    
+    <div style="display:flex;gap:1rem;margin-top:1.5rem">
+      <a href="pages/signup.html" class="btn btn-primary" style="flex:1">
+        <i class="fas fa-rocket"></i>
+        ابدأ مجاناً الآن
+      </a>
+      <button class="btn btn-ghost" data-modal-close style="flex:1">إغلاق</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================================
+     Promo Modal
+     =================================== -->
+<div class="modal-overlay" id="promo-modal">
+  <div class="modal" style="text-align:center">
+    <button class="modal-close" data-modal-close>✕</button>
+    <div style="font-size:3rem;margin-bottom:1rem">🎉</div>
+    <h3 style="margin-bottom:0.5rem">عرض خاص لفترة محدودة!</h3>
+    <p style="color:var(--text-secondary);margin-bottom:1.5rem">احصل على خصم 30% على الخطة الاحترافية لأول 3 أشهر</p>
+    <div style="background:rgba(108,99,255,0.1);border:1px solid rgba(108,99,255,0.3);border-radius:var(--radius-md);padding:1rem;margin-bottom:1.5rem">
+      <div style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem">استخدم كود الخصم</div>
+      <div style="font-size:1.5rem;font-weight:800;color:var(--primary-light);letter-spacing:3px">CLAW30</div>
+    </div>
+    <a href="pages/signup.html?promo=CLAW30" class="btn btn-primary btn-lg" style="width:100%">
+      <i class="fas fa-tag"></i>
+      استخدم الكود الآن
+    </a>
+    <button class="btn btn-ghost" data-modal-close style="width:100%;margin-top:0.75rem">لا شكراً</button>
+  </div>
+</div>
+
+<!-- ===================================
+     Cookie Banner
+     =================================== -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg-card);border-top:1px solid var(--border);padding:1rem 2rem;z-index:var(--z-sticky);align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+  <p style="font-size:0.875rem;color:var(--text-secondary);flex:1">
+    🍪 نستخدم ملفات تعريف الارتباط لتحسين تجربتك. 
+    <a href="pages/cookies.html" style="color:var(--primary-light)">اعرف المزيد</a>
+  </p>
+  <div style="display:flex;gap:0.75rem">
+    <button id="decline-cookies" class="btn btn-ghost btn-sm">رفض</button>
+    <button id="accept-cookies" class="btn btn-primary btn-sm">قبول الكل</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script>
+  // Google Analytics placeholder
+  // gtag('config', 'GA_MEASUREMENT_ID');
+  
+  // Initialize calculator result styling
+  document.addEventListener('DOMContentLoaded', () => {
+    const style = document.createElement('style');
+    style.textContent = `
+      .calc-result-item {
+        background: var(--bg-darker);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: 1rem;
+        text-align: center;
+      }
+      .calc-result-label {
+        display: block;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+      .calc-result-value {
+        display: block;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+    `;
+    document.head.appendChild(style);
+  });
+</script>
+</body>
+</html>

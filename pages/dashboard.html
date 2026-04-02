@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - ClawCommerce</title>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon" style="width:32px;height:32px;background:var(--gradient-primary);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem">🦞</div>
+      <span style="background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">ClawCommerce</span>
+    </div>
+    
+    <!-- Main Navigation -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">الرئيسية</div>
+      <a href="dashboard.html" class="sidebar-link active">
+        <div class="icon"><i class="fas fa-home"></i></div>
+        لوحة التحكم
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-chart-line"></i></div>
+        التحليلات
+        <span class="badge badge-primary" style="margin-right:auto">جديد</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-shopping-bag"></i></div>
+        الطلبات
+        <span class="badge badge-warning" style="margin-right:auto">12</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-box"></i></div>
+        المنتجات
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-users"></i></div>
+        العملاء
+      </a>
+    </div>
+    
+    <!-- AI Agents -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">وكلاء الذكاء الاصطناعي</div>
+      <a href="#" class="sidebar-link">
+        <div class="icon">🛒</div>
+        وكيل المبيعات
+        <span class="badge badge-success" style="margin-right:auto;font-size:0.65rem">نشط</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon">📦</div>
+        وكيل المخزون
+        <span class="badge badge-success" style="margin-right:auto;font-size:0.65rem">نشط</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon">📢</div>
+        وكيل التسويق
+        <span class="badge badge-warning" style="margin-right:auto;font-size:0.65rem">يعمل</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon">🎧</div>
+        وكيل الدعم
+        <span class="badge badge-success" style="margin-right:auto;font-size:0.65rem">نشط</span>
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon">💰</div>
+        وكيل التسعير
+        <span class="badge badge-success" style="margin-right:auto;font-size:0.65rem">نشط</span>
+      </a>
+    </div>
+    
+    <!-- Settings -->
+    <div class="sidebar-section">
+      <div class="sidebar-section-title">الإعدادات</div>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-cog"></i></div>
+        الإعدادات
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-plug"></i></div>
+        التكاملات
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-credit-card"></i></div>
+        الاشتراك
+      </a>
+      <a href="#" class="sidebar-link">
+        <div class="icon"><i class="fas fa-headset"></i></div>
+        الدعم الفني
+        <span class="badge badge-danger" style="margin-right:auto">3</span>
+      </a>
+    </div>
+    
+    <!-- User Profile -->
+    <div style="padding:1rem 0.75rem;border-top:1px solid var(--border);margin-top:auto">
+      <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;border-radius:var(--radius-md);cursor:pointer;transition:background 0.2s" onmouseover="this.style.background='rgba(255,255,255,0.05)'" onmouseout="this.style.background='transparent'">
+        <div class="user-avatar">أ</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-weight:600;color:white;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">أحمد الشمري</div>
+          <div style="font-size:0.75rem;color:var(--text-muted)">الخطة الاحترافية</div>
+        </div>
+        <i class="fas fa-ellipsis-v" style="color:var(--text-muted);font-size:0.8rem"></i>
+      </div>
+    </div>
+  </aside>
+  
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Topbar -->
+    <div class="dashboard-topbar">
+      <div style="display:flex;align-items:center;gap:1rem">
+        <button class="btn btn-icon btn-ghost" id="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('open')">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="topbar-search">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="ابحث عن طلب، منتج، عميل...">
+          <kbd style="font-size:0.7rem;color:var(--text-muted);background:var(--bg-darker);padding:0.2rem 0.4rem;border-radius:4px;border:1px solid var(--border)">⌘K</kbd>
+        </div>
+      </div>
+      
+      <div class="topbar-actions">
+        <!-- Language Toggle -->
+        <div class="lang-toggle">
+          <button class="lang-btn active" data-lang="ar">عربي</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        
+        <!-- Notifications -->
+        <div style="position:relative" id="notif-wrapper">
+          <button class="notification-btn" onclick="toggleNotifications()">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">5</span>
+          </button>
+          
+          <div class="notifications-panel" id="notifications-panel" style="display:none">
+            <div class="notifications-header">
+              <span class="notifications-title">الإشعارات</span>
+              <button class="btn btn-ghost btn-sm" style="font-size:0.75rem">تحديد الكل كمقروء</button>
+            </div>
+            <div class="notifications-list">
+              <div class="notification-item unread">
+                <div class="notification-icon" style="background:rgba(67,233,123,0.15)">📦</div>
+                <div class="notification-content">
+                  <div class="notification-text">وكيل المخزون: منتج "حذاء رياضي" وصل لمستوى إعادة الطلب</div>
+                  <div class="notification-time">منذ 5 دقائق</div>
+                </div>
+              </div>
+              <div class="notification-item unread">
+                <div class="notification-icon" style="background:rgba(108,99,255,0.15)">🛒</div>
+                <div class="notification-content">
+                  <div class="notification-text">طلب جديد #1247 بقيمة 450 ريال</div>
+                  <div class="notification-time">منذ 12 دقيقة</div>
+                </div>
+              </div>
+              <div class="notification-item unread">
+                <div class="notification-icon" style="background:rgba(255,101,132,0.15)">⭐</div>
+                <div class="notification-content">
+                  <div class="notification-text">تقييم جديد 5 نجوم من عميل</div>
+                  <div class="notification-time">منذ 30 دقيقة</div>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div class="notification-icon" style="background:rgba(255,189,46,0.15)">💰</div>
+                <div class="notification-content">
+                  <div class="notification-text">وكيل التسعير: تم تحديث أسعار 15 منتج</div>
+                  <div class="notification-time">منذ ساعة</div>
+                </div>
+              </div>
+              <div class="notification-item">
+                <div class="notification-icon" style="background:rgba(56,249,215,0.15)">📢</div>
+                <div class="notification-content">
+                  <div class="notification-text">حملة التسويق الأسبوعية حققت 1,200 نقرة</div>
+                  <div class="notification-time">منذ 3 ساعات</div>
+                </div>
+              </div>
+            </div>
+            <div style="padding:0.75rem;text-align:center;border-top:1px solid var(--border)">
+              <a href="#" style="font-size:0.875rem;color:var(--primary-light)">عرض جميع الإشعارات</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- User Menu -->
+        <div class="dropdown" id="user-dropdown">
+          <div class="user-avatar" onclick="document.getElementById('user-dropdown').classList.toggle('open')">أ</div>
+          <div class="dropdown-menu">
+            <div class="dropdown-item">
+              <i class="fas fa-user"></i>
+              الملف الشخصي
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-cog"></i>
+              الإعدادات
+            </div>
+            <div class="dropdown-item">
+              <i class="fas fa-credit-card"></i>
+              الاشتراك
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item danger" onclick="window.location.href='login.html'">
+              <i class="fas fa-sign-out-alt"></i>
+              تسجيل الخروج
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Welcome Banner -->
+    <div style="background:var(--gradient-primary);border-radius:var(--radius-xl);padding:1.5rem 2rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+      <div style="position:relative">
+        <h2 style="color:white;font-size:1.3rem;margin-bottom:0.25rem">مرحباً، أحمد! 👋</h2>
+        <p style="color:rgba(255,255,255,0.8);font-size:0.9rem">لديك 12 طلب جديد و3 تنبيهات تحتاج انتباهك اليوم</p>
+      </div>
+      <div style="position:relative;display:flex;gap:0.75rem">
+        <a href="#" class="btn btn-white btn-sm">عرض الطلبات</a>
+        <a href="#" class="btn btn-outline-white btn-sm">التقارير</a>
+      </div>
+    </div>
+    
+    <!-- Stats Cards -->
+    <div class="dashboard-stats">
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(108,99,255,0.15)">
+            <i class="fas fa-shopping-bag" style="color:var(--primary-light)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 12.5%</span>
+        </div>
+        <span class="stat-card-value" data-counter="1247" data-suffix="">0</span>
+        <span class="stat-card-label">إجمالي الطلبات</span>
+        <div class="progress-bar" style="margin-top:0.75rem">
+          <div class="progress-fill" style="width:75%"></div>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(67,233,123,0.15)">
+            <i class="fas fa-dollar-sign" style="color:var(--accent)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 24.3%</span>
+        </div>
+        <span class="stat-card-value">98.5K</span>
+        <span class="stat-card-label">الإيرادات (ريال)</span>
+        <div class="progress-bar" style="margin-top:0.75rem">
+          <div class="progress-fill" style="width:85%"></div>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(255,101,132,0.15)">
+            <i class="fas fa-users" style="color:var(--secondary)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 8.1%</span>
+        </div>
+        <span class="stat-card-value" data-counter="3842" data-suffix="">0</span>
+        <span class="stat-card-label">إجمالي العملاء</span>
+        <div class="progress-bar" style="margin-top:0.75rem">
+          <div class="progress-fill" style="width:60%"></div>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-card-header">
+          <div class="stat-card-icon" style="background:rgba(56,249,215,0.15)">
+            <i class="fas fa-star" style="color:var(--accent-blue)"></i>
+          </div>
+          <span class="stat-card-trend up"><i class="fas fa-arrow-up"></i> 0.2</span>
+        </div>
+        <span class="stat-card-value">4.9★</span>
+        <span class="stat-card-label">متوسط التقييم</span>
+        <div class="progress-bar" style="margin-top:0.75rem">
+          <div class="progress-fill" style="width:98%"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Charts Row -->
+    <div class="grid-2" style="gap:1.5rem;margin-bottom:2rem">
+      <!-- Revenue Chart -->
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">الإيرادات الشهرية</span>
+          <div class="tabs">
+            <button class="tab-btn active" onclick="switchChartPeriod('week', this)">أسبوع</button>
+            <button class="tab-btn" onclick="switchChartPeriod('month', this)">شهر</button>
+            <button class="tab-btn" onclick="switchChartPeriod('year', this)">سنة</button>
+          </div>
+        </div>
+        <canvas id="revenue-chart" height="200"></canvas>
+      </div>
+      
+      <!-- Orders Chart -->
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">توزيع الطلبات</span>
+          <div class="chart-legend">
+            <div class="legend-item">
+              <div class="legend-dot" style="background:var(--primary)"></div>
+              مكتملة
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot" style="background:var(--secondary)"></div>
+              ملغاة
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot" style="background:#FFBD2E"></div>
+              معلقة
+            </div>
+          </div>
+        </div>
+        <canvas id="orders-chart" height="200"></canvas>
+      </div>
+    </div>
+    
+    <!-- AI Agents Status -->
+    <div class="chart-container" style="margin-bottom:2rem">
+      <div class="chart-header">
+        <span class="chart-title">حالة وكلاء الذكاء الاصطناعي</span>
+        <a href="#" class="btn btn-ghost btn-sm">إدارة الوكلاء</a>
+      </div>
+      
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem">
+        <div style="text-align:center;padding:1.25rem;background:var(--bg-darker);border-radius:var(--radius-md);border:1px solid rgba(67,233,123,0.2)">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🛒</div>
+          <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">وكيل المبيعات</div>
+          <div class="badge badge-success">نشط</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem">+35% مبيعات</div>
+        </div>
+        
+        <div style="text-align:center;padding:1.25rem;background:var(--bg-darker);border-radius:var(--radius-md);border:1px solid rgba(67,233,123,0.2)">
+          <div style="font-size:2rem;margin-bottom:0.5rem">📦</div>
+          <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">وكيل المخزون</div>
+          <div class="badge badge-success">نشط</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem">0 نفاد مخزون</div>
+        </div>
+        
+        <div style="text-align:center;padding:1.25rem;background:var(--bg-darker);border-radius:var(--radius-md);border:1px solid rgba(255,189,46,0.2)">
+          <div style="font-size:2rem;margin-bottom:0.5rem">📢</div>
+          <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">وكيل التسويق</div>
+          <div class="badge badge-warning">يعمل</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem">حملة نشطة</div>
+        </div>
+        
+        <div style="text-align:center;padding:1.25rem;background:var(--bg-darker);border-radius:var(--radius-md);border:1px solid rgba(67,233,123,0.2)">
+          <div style="font-size:2rem;margin-bottom:0.5rem">🎧</div>
+          <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">وكيل الدعم</div>
+          <div class="badge badge-success">نشط</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem">127 محادثة</div>
+        </div>
+        
+        <div style="text-align:center;padding:1.25rem;background:var(--bg-darker);border-radius:var(--radius-md);border:1px solid rgba(67,233,123,0.2)">
+          <div style="font-size:2rem;margin-bottom:0.5rem">💰</div>
+          <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">وكيل التسعير</div>
+          <div class="badge badge-success">نشط</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.5rem">+22% هامش</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Recent Orders -->
+    <div class="chart-container" style="margin-bottom:2rem">
+      <div class="chart-header">
+        <span class="chart-title">أحدث الطلبات</span>
+        <a href="#" class="btn btn-ghost btn-sm">عرض الكل</a>
+      </div>
+      
+      <div style="overflow-x:auto">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>رقم الطلب</th>
+              <th>العميل</th>
+              <th>المنتجات</th>
+              <th>المبلغ</th>
+              <th>الحالة</th>
+              <th>التاريخ</th>
+              <th>الإجراءات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:var(--primary-light);font-weight:600">#1247</td>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <div style="width:28px;height:28px;background:var(--gradient-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:white">م</div>
+                  محمد علي
+                </div>
+              </td>
+              <td>حذاء رياضي × 2</td>
+              <td style="color:var(--accent);font-weight:600">450 ر.س</td>
+              <td><span class="badge badge-warning">قيد المعالجة</span></td>
+              <td style="color:var(--text-muted)">منذ 5 دقائق</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-primary btn-sm" style="padding:0.3rem 0.6rem">تأكيد</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="color:var(--primary-light);font-weight:600">#1246</td>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <div style="width:28px;height:28px;background:var(--gradient-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:var(--bg-dark)">س</div>
+                  سارة أحمد
+                </div>
+              </td>
+              <td>فستان صيفي × 1</td>
+              <td style="color:var(--accent);font-weight:600">280 ر.س</td>
+              <td><span class="badge badge-success">مكتمل</span></td>
+              <td style="color:var(--text-muted)">منذ 20 دقيقة</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-print"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="color:var(--primary-light);font-weight:600">#1245</td>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <div style="width:28px;height:28px;background:linear-gradient(135deg,#FF6584,#FF8C69);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:white">ع</div>
+                  عبدالله خالد
+                </div>
+              </td>
+              <td>ساعة ذكية × 1</td>
+              <td style="color:var(--accent);font-weight:600">1,200 ر.س</td>
+              <td><span class="badge badge-info">تم الشحن</span></td>
+              <td style="color:var(--text-muted)">منذ ساعة</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-truck"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="color:var(--primary-light);font-weight:600">#1244</td>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <div style="width:28px;height:28px;background:linear-gradient(135deg,#38F9D7,#43E97B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:var(--bg-dark)">ن</div>
+                  نورة محمد
+                </div>
+              </td>
+              <td>عطر فاخر × 3</td>
+              <td style="color:var(--accent);font-weight:600">750 ر.س</td>
+              <td><span class="badge badge-success">مكتمل</span></td>
+              <td style="color:var(--text-muted)">منذ 3 ساعات</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-print"></i></button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td style="color:var(--primary-light);font-weight:600">#1243</td>
+              <td>
+                <div style="display:flex;align-items:center;gap:0.5rem">
+                  <div style="width:28px;height:28px;background:linear-gradient(135deg,#6C63FF,#FF6584);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:white">ف</div>
+                  فيصل العمري
+                </div>
+              </td>
+              <td>لابتوب × 1</td>
+              <td style="color:var(--secondary);font-weight:600">3,500 ر.س</td>
+              <td><span class="badge badge-danger">ملغي</span></td>
+              <td style="color:var(--text-muted)">منذ 5 ساعات</td>
+              <td>
+                <div style="display:flex;gap:0.5rem">
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-eye"></i></button>
+                  <button class="btn btn-ghost btn-sm" style="padding:0.3rem 0.6rem"><i class="fas fa-redo"></i></button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+    <!-- Bottom Row -->
+    <div class="grid-2" style="gap:1.5rem">
+      <!-- Top Products -->
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">أفضل المنتجات مبيعاً</span>
+          <a href="#" class="btn btn-ghost btn-sm">عرض الكل</a>
+        </div>
+        
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div style="display:flex;align-items:center;gap:1rem">
+            <div style="width:40px;height:40px;background:rgba(108,99,255,0.15);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem">👟</div>
+            <div style="flex:1">
+              <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">حذاء رياضي Nike</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:85%"></div>
+              </div>
+            </div>
+            <div style="text-align:left;min-width:60px">
+              <div style="font-weight:700;color:var(--accent);font-size:0.875rem">247</div>
+              <div style="font-size:0.7rem;color:var(--text-muted)">مبيعة</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;align-items:center;gap:1rem">
+            <div style="width:40px;height:40px;background:rgba(67,233,123,0.15);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem">⌚</div>
+            <div style="flex:1">
+              <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">ساعة Apple Watch</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:70%"></div>
+              </div>
+            </div>
+            <div style="text-align:left;min-width:60px">
+              <div style="font-weight:700;color:var(--accent);font-size:0.875rem">183</div>
+              <div style="font-size:0.7rem;color:var(--text-muted)">مبيعة</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;align-items:center;gap:1rem">
+            <div style="width:40px;height:40px;background:rgba(255,101,132,0.15);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem">👗</div>
+            <div style="flex:1">
+              <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">فستان صيفي</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:60%"></div>
+              </div>
+            </div>
+            <div style="text-align:left;min-width:60px">
+              <div style="font-weight:700;color:var(--accent);font-size:0.875rem">156</div>
+              <div style="font-size:0.7rem;color:var(--text-muted)">مبيعة</div>
+            </div>
+          </div>
+          
+          <div style="display:flex;align-items:center;gap:1rem">
+            <div style="width:40px;height:40px;background:rgba(255,189,46,0.15);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem">🌸</div>
+            <div style="flex:1">
+              <div style="font-weight:600;color:white;font-size:0.875rem;margin-bottom:0.25rem">عطر فاخر</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width:45%"></div>
+              </div>
+            </div>
+            <div style="text-align:left;min-width:60px">
+              <div style="font-weight:700;color:var(--accent);font-size:0.875rem">118</div>
+              <div style="font-size:0.7rem;color:var(--text-muted)">مبيعة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Actions -->
+      <div class="chart-container">
+        <div class="chart-header">
+          <span class="chart-title">إجراءات سريعة</span>
+        </div>
+        
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem">
+          <button class="btn btn-ghost" style="flex-direction:column;gap:0.5rem;padding:1.25rem;height:auto;border-radius:var(--radius-md)" onclick="ClawCommerce.showToast('جاري إضافة منتج جديد...', 'info')">
+            <i class="fas fa-plus-circle" style="font-size:1.5rem;color:var(--primary-light)"></i>
+            <span style="font-size:0.875rem">إضافة منتج</span>
+          </button>
+          
+          <button class="btn btn-ghost" style="flex-direction:column;gap:0.5rem;padding:1.25rem;height:auto;border-radius:var(--radius-md)" onclick="ClawCommerce.showToast('جاري إنشاء حملة تسويقية...', 'info')">
+            <i class="fas fa-bullhorn" style="font-size:1.5rem;color:var(--secondary)"></i>
+            <span style="font-size:0.875rem">حملة تسويقية</span>
+          </button>
+          
+          <button class="btn btn-ghost" style="flex-direction:column;gap:0.5rem;padding:1.25rem;height:auto;border-radius:var(--radius-md)" onclick="ClawCommerce.showToast('جاري تصدير التقرير...', 'info')">
+            <i class="fas fa-file-export" style="font-size:1.5rem;color:var(--accent)"></i>
+            <span style="font-size:0.875rem">تصدير تقرير</span>
+          </button>
+          
+          <button class="btn btn-ghost" style="flex-direction:column;gap:0.5rem;padding:1.25rem;height:auto;border-radius:var(--radius-md)" onclick="ClawCommerce.showToast('جاري فتح نافذة الدعم...', 'info')">
+            <i class="fas fa-headset" style="font-size:1.5rem;color:var(--accent-blue)"></i>
+            <span style="font-size:0.875rem">الدعم الفني</span>
+          </button>
+          
+          <button class="btn btn-ghost" style="flex-direction:column;gap:0.5rem;padding:1.25rem;height:auto;border-radius:var(--radius-md)" onclick="ClawCommerce.showToast('جاري تحديث المخزون...', 'info')">
+            <i class="fas fa-boxes" style="font-size:1.5rem;color:#FFBD2E"></i>
+            <span style="font-size:0.875rem">تحديث المخزون</span>
+          </button>
+          
+          <button class="btn btn-ghost" style="flex-direction:column;gap:0.5rem;padding:1.25rem;height:auto;border-radius:var(--radius-md)" onclick="ClawCommerce.showToast('جاري فتح إعدادات الوكلاء...', 'info')">
+            <i class="fas fa-robot" style="font-size:1.5rem;color:var(--primary-light)"></i>
+            <span style="font-size:0.875rem">إعداد الوكلاء</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/966500000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="../js/main.js"></script>
+<script>
+// Initialize Charts
+document.addEventListener('DOMContentLoaded', () => {
+  // Revenue Chart
+  const revenueCtx = document.getElementById('revenue-chart')?.getContext('2d');
+  if (revenueCtx) {
+    new Chart(revenueCtx, {
+      type: 'line',
+      data: {
+        labels: ['السبت', 'الأحد', 'الاثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة'],
+        datasets: [{
+          label: 'الإيرادات',
+          data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
+          borderColor: '#6C63FF',
+          backgroundColor: 'rgba(108, 99, 255, 0.1)',
+          borderWidth: 2,
+          fill: true,
+          tension: 0.4,
+          pointBackgroundColor: '#6C63FF',
+          pointRadius: 4,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#12142A',
+            borderColor: 'rgba(108, 99, 255, 0.3)',
+            borderWidth: 1,
+            titleColor: '#fff',
+            bodyColor: '#B0B3C6',
+            callbacks: {
+              label: (ctx) => ` ${ctx.parsed.y.toLocaleString('ar')} ريال`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#6B6F8A' }
+          },
+          y: {
+            grid: { color: 'rgba(255,255,255,0.05)' },
+            ticks: { color: '#6B6F8A', callback: (v) => v.toLocaleString('ar') }
+          }
+        }
+      }
+    });
+  }
+  
+  // Orders Doughnut Chart
+  const ordersCtx = document.getElementById('orders-chart')?.getContext('2d');
+  if (ordersCtx) {
+    new Chart(ordersCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['مكتملة', 'ملغاة', 'معلقة'],
+        datasets: [{
+          data: [847, 156, 244],
+          backgroundColor: ['#6C63FF', '#FF6584', '#FFBD2E'],
+          borderWidth: 0,
+          hoverOffset: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        cutout: '70%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#B0B3C6',
+              padding: 20,
+              font: { family: 'Cairo' }
+            }
+          },
+          tooltip: {
+            backgroundColor: '#12142A',
+            borderColor: 'rgba(108, 99, 255, 0.3)',
+            borderWidth: 1,
+            titleColor: '#fff',
+            bodyColor: '#B0B3C6',
+          }
+        }
+      }
+    });
+  }
+});
+
+function switchChartPeriod(period, btn) {
+  document.querySelectorAll('.tabs .tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  ClawCommerce.showToast(`تم تغيير الفترة إلى: ${btn.textContent}`, 'info');
+}
+
+function toggleNotifications() {
+  const panel = document.getElementById('notifications-panel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+}
+
+// Close notifications on outside click
+document.addEventListener('click', (e) => {
+  const wrapper = document.getElementById('notif-wrapper');
+  if (!wrapper?.contains(e.target)) {
+    document.getElementById('notifications-panel').style.display = 'none';
+  }
+  
+  const dropdown = document.getElementById('user-dropdown');
+  if (!dropdown?.contains(e.target)) {
+    dropdown?.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
