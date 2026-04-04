@@ -1,0 +1,22 @@
+{
+  "name": "clawcommerce-landing",
+  "version": "1.0.0",
+  "description": "ClawCommerce - Smart SaaS platform for e-commerce management",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build required'",
+    "lint": "echo 'No linting configured'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.1.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "ecommerce",
+    "ai",
+    "saas",
+    "clawcommerce"
+  ],
+  "author": "ClawCommerce",
+  "license": "MIT"
+}
